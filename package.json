@@ -1,0 +1,42 @@
+{
+  "name": "stream-from-array",
+  "version": "0.1.0",
+  "description": "Create streams from arrays of arbitrary Javascript values like strings, functions, arrays, etc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schnittstabil/stream-from-array.git"
+  },
+  "keywords": [
+    "readable",
+    "object",
+    "stream",
+    "gulpfriendly",
+    "adapter",
+    "to stream",
+    "array"
+  ],
+  "author": "Michael Mayer <michael@schnittstabil.de> (https://github.com/schnittstabil)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schnittstabil/stream-from-array/issues"
+  },
+  "homepage": "https://github.com/schnittstabil/stream-from-array",
+  "engines": {
+    "node": "^0.11 || ^0.10"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/gulp/bin/gulp.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.1",
+    "gulp": "^3.8.6",
+    "gulp-istanbul": "^0.2.0",
+    "gulp-jscs": "^0.6.0",
+    "gulp-jshint": "^1.7.1",
+    "gulp-mocha": "^0.5.0",
+    "merge-stream": "^0.1.5",
+    "stream-recorder": "^0.3.0",
+    "vinyl": "^0.2.3"
+  }
+}
