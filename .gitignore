@@ -25,4 +25,4 @@ build/Release
 node_modules
 
 .coveralls.yml
-stream-from-value-*.*.*.tgz
+stream-from-array-*.*.*.tgz

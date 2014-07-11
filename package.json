@@ -1,6 +1,6 @@
 {
   "name": "stream-from-array",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create streams from arrays of arbitrary Javascript values like strings, functions, arrays, etc.",
   "repository": {
     "type": "git",
@@ -25,6 +25,9 @@
     "node": "^0.11 || ^0.10"
   },
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "./node_modules/gulp/bin/gulp.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },

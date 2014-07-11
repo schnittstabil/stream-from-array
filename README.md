@@ -80,7 +80,7 @@ See also [stream-recorder](https://github.com/schnittstabil/stream-recorder) for
 
 ### Class: StreamFromArray
 
-StreamFromArrays are [Readable](http://nodejs.org/api/stream.html#stream_class_stream_readable_1) streams.
+_StreamFromArrays_ are [Readable](http://nodejs.org/api/stream.html#stream_class_stream_readable_1) streams.
 
 #### new StreamFromArray(array, [options])
 
