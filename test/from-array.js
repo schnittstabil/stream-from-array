@@ -25,6 +25,14 @@ test.cb('with decodeStrings:false should emit string results', t => {
 	.resume();
 });
 
+test.cb('should end with empty array', t => {
+	fromArray([])
+	.on('data', () => t.fail())
+	.on('error', () => t.fail())
+	.on('end', () => t.end())
+	.resume();
+});
+
 test('should throw errors on non array', t => {
 	const sut = fromArray(null);
 

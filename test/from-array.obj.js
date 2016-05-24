@@ -26,6 +26,14 @@ test.cb('with mixed object as value should emit value', t => {
 	.resume();
 });
 
+test.cb('should end with empty array', t => {
+	fromArray.obj([])
+	.on('data', () => t.fail())
+	.on('error', () => t.fail())
+	.on('end', () => t.end())
+	.resume();
+});
+
 test('should throw errors on non array', t => {
 	const sut = fromArray.obj(null);
 

@@ -25,6 +25,13 @@ StreamFromArray.prototype._read = function () {
 	var needMoreData;
 	var value;
 
+	if (this.__array.length === 0) {
+		// end of data
+		this.push(null);
+
+		return;
+	}
+
 	while (this.__index < this.__array.length && needMoreData !== false) {
 		value = this.__array[this.__index++];
 		needMoreData = this.push(value);
