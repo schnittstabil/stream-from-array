@@ -22,24 +22,23 @@
   },
   "homepage": "https://github.com/schnittstabil/stream-from-array",
   "engines": {
-    "node": "^0.11 || ^0.10"
+    "node": ">=0.10.0"
   },
   "main": "index.js",
   "files": [
     "index.js"
   ],
   "scripts": {
-    "test": "./node_modules/gulp/bin/gulp.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "test": "xo && nyc ava --verbose --timeout=10s"
   },
   "devDependencies": {
-    "coveralls": "^2.11.1",
-    "gulp": "^3.8.6",
-    "gulp-istanbul": "^0.2.0",
-    "gulp-jscs": "^0.6.0",
-    "gulp-jshint": "^1.7.1",
-    "gulp-mocha": "^0.5.0",
-    "merge-stream": "^0.1.5",
-    "stream-recorder": "^0.3.0",
-    "vinyl": "^0.2.3"
+    "ava": "^0.14.0",
+    "coveralls": "^2.11.6",
+    "gulp": "^3.9.1",
+    "merge-stream": "^1.0.0",
+    "nyc": "^6.4.4",
+    "stream-recorder": "^0.3.3",
+    "vinyl": "^1.1.1",
+    "xo": "^0.15.1"
   }
 }

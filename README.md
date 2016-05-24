@@ -6,7 +6,9 @@ Create streams from arrays of arbitrary Javascript values like strings, function
 npm install stream-from-array --save
 ```
 
+
 ## Usage
+
 
 ### Stream of array of `String | Buffer`s
 
@@ -19,6 +21,7 @@ StreamFromArray(['some', ' ', 'strings'])
 StreamFromArray([new Buffer('some') , ' mixed ', new Buffer('strings')])
   .pipe(process.stdout); // output: some mixed strings
 ```
+
 
 ### Stream of (arbitrary) Javascript Values
 
@@ -38,6 +41,7 @@ StreamFromArray.obj(['some', 42, 'mixed', 'array', function(){}])
     */
   });
 ```
+
 
 ### Stream of [Gulp](http://gulpjs.com/) Files
 
@@ -76,11 +80,14 @@ StreamFromArray.obj([hello, world])
 
 See also [stream-recorder](https://github.com/schnittstabil/stream-recorder) for testing gulp plugins with stream-from-array.
 
+
 ## API
+
 
 ### Class: StreamFromArray
 
 _StreamFromArrays_ are [Readable](http://nodejs.org/api/stream.html#stream_class_stream_readable_1) streams.
+
 
 #### new StreamFromArray(array, [options])
 
@@ -89,12 +96,12 @@ _StreamFromArrays_ are [Readable](http://nodejs.org/api/stream.html#stream_class
 
 Note: The `new` operator can be omitted.
 
+
 #### StreamFromArray#obj(array, [options])
 
 A convenience wrapper for `new StreamFromArray(array, {objectMode: true, ...})`.
 
+
 ## License
 
-Copyright (c) 2014 Michael Mayer
-
-Licensed under the MIT license.
+MIT © [Michael Mayer](http://schnittstabil.de)
