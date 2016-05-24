@@ -1,6 +1,6 @@
 {
   "name": "stream-from-array",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Create streams from arrays of arbitrary Javascript values like strings, functions, arrays, etc.",
   "repository": {
     "type": "git",
