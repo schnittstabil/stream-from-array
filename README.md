@@ -13,7 +13,7 @@ npm install stream-from-array --save
 ### Stream of array of `String | Buffer`s
 
 ```JavaScript
-var StreamFromArray = require('stream-from-array');
+import StreamFromArray from 'stream-from-array';
 
 StreamFromArray(['some', ' ', 'strings'])
   .pipe(process.stdout); // output: some strings
@@ -26,11 +26,12 @@ StreamFromArray([new Buffer('some') , ' mixed ', new Buffer('strings')])
 ### Stream of (arbitrary) Javascript Values
 
 ```JavaScript
-var StreamFromArray = require('stream-from-array');
+import StreamFromArray from 'stream-from-array';
 
-var i = 0;
-StreamFromArray.obj(['some', 42, 'mixed', 'array', function(){}])
-  .on('data', function(data){
+let i = 0;
+
+StreamFromArray.obj(['some', 42, 'mixed', 'array', () => {}])
+  .on('data', data => {
     console.log(i++ + ': ' + typeof data);
     /* outputs:
       0: string
@@ -54,17 +55,17 @@ npm install vinyl
 Test some awsome Gulp plugin:
 
 ```JavaScript
-var StreamFromArray = require('stream-from-array'),
-    File = require('vinyl');
+import StreamFromArray from 'stream-from-array';
+import File from 'vinyl';
 
-var hello = new File({
+const hello = new File({
       cwd: '/',
       base: '/hello/',
       path: '/hello/hello.js',
       contents: new Buffer('console.log("Hello");')
     });
 
-var world = new File({
+const world = new File({
       cwd: '/',
       base: '/hello/',
       path: '/hello/world.js',
@@ -73,7 +74,7 @@ var world = new File({
 
 StreamFromArray.obj([hello, world])
   .pipe(someAwsomeGulpPlugin())
-  .on('data', function(file){
+  .on('data', file => {
     console.log(file.contents.toString()); // dunno what someAwsomeGulpPlugin does :)
   });
 ```
